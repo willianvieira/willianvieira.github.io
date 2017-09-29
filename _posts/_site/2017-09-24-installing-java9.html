@@ -1,0 +1,26 @@
+<p>Hi my friends, my first post is about java 9, java is my prefered language, then I show for us How to install JDK9 and JShell using update-alternatives</p>
+
+<h1 id="1-download-java9-jdk">1 Download java9 jdk</h1>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /path/to/file
+wget http://download.java.net/java/GA/jdk9/9/binaries/jdk-9+181_linux-x64_bin.tar.gz</code></pre></figure>
+
+<h1 id="2-uncompress-files">2 uncompress files</h1>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /path/to/file
+tar -xvf jdk-9+181_linux-x64_bin.tar.gz</code></pre></figure>
+
+<h1 id="3-installing-this-using-update-alternatives">3 installing this using update-alternatives</h1>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo update-alternatives --install /usr/bin/java java /path/to/file/jdk-9/bin/java 0
+sudo update-alternatives --install /usr/bin/javac javac /path/to/file/jdk-9/bin/javac 0
+sudo update-alternatives --install /usr/bin/jshell jshell /path/to/file/jdk-9/bin/jshell 0</code></pre></figure>
+
+<h1 id="4-trying-your-installation">4 trying your installation</h1>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">java -version
+openjdk version <span class="s2">"9"</span>
+OpenJDK Runtime Environment <span class="o">(</span>build 9+181<span class="o">)</span>
+OpenJDK 64-Bit Server VM <span class="o">(</span>build 9+181, mixed mode<span class="o">)</span></code></pre></figure>
+
+<p>It’s just for today, bye !!!</p>

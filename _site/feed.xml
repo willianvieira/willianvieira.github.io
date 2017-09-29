@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>willianvieira.github.io</title>
+    <description>Blogging about programming languages or anything :)</description>
+    <link>http://localhost:4000//</link>
+    <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 29 Sep 2017 20:26:03 -0300</pubDate>
+    <lastBuildDate>Fri, 29 Sep 2017 20:26:03 -0300</lastBuildDate>
+    <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>How do install java9 and JShell !</title>
+        <description>&lt;p&gt;Hi my friends, my first post is about java 9, java is my prefered language, then I show for us How to install JDK9 and JShell using update-alternatives&lt;/p&gt;
+
+&lt;h1 id=&quot;1-download-java9-jdk&quot;&gt;1 Download java9 jdk&lt;/h1&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /path/to/file
+wget http://download.java.net/java/GA/jdk9/9/binaries/jdk-9+181_linux-x64_bin.tar.gz&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;2-uncompress-files&quot;&gt;2 uncompress files&lt;/h1&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /path/to/file
+tar -xvf jdk-9+181_linux-x64_bin.tar.gz&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;3-installing-this-using-update-alternatives&quot;&gt;3 installing this using update-alternatives&lt;/h1&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo update-alternatives --install /usr/bin/java java /path/to/file/jdk-9/bin/java 0
+sudo update-alternatives --install /usr/bin/javac javac /path/to/file/jdk-9/bin/javac 0
+sudo update-alternatives --install /usr/bin/jshell jshell /path/to/file/jdk-9/bin/jshell 0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;4-trying-your-installation&quot;&gt;4 trying your installation&lt;/h1&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;java -version
+openjdk version &lt;span class=&quot;s2&quot;&gt;&quot;9&quot;&lt;/span&gt;
+OpenJDK Runtime Environment &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;build 9+181&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+OpenJDK 64-Bit Server VM &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;build 9+181, mixed mode&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It’s just for today, bye !!!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 24 Sep 2017 09:00:00 -0300</pubDate>
+        <link>http://localhost:4000//java,/programming/2017/09/24/installing-java9.html</link>
+        <guid isPermaLink="true">http://localhost:4000//java,/programming/2017/09/24/installing-java9.html</guid>
+        
+        
+        <category>Java,</category>
+        
+        <category>Programming</category>
+        
+      </item>
+    
+  </channel>
+</rss>

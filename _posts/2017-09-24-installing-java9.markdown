@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How do install java9"
+title:  "How do install java9 and JShell !"
 date:   2017-09-24 12:00:00
 categories: Java, Programming
 ---

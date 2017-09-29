@@ -13,4 +13,5 @@ gems: [jekyll-paginate]
 
 # Details for the RSS feed generator
 url:            'https://willianvieira.github.io'
-author:         'Willianb Vieira Rosa'
+author:         'Willian Vieira Rosa'
+theme: jekyll-theme-hacker

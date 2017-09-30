@@ -5,9 +5,67 @@
     <description>Blogging about programming languages or anything :)</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 30 Sep 2017 10:09:37 -0300</pubDate>
-    <lastBuildDate>Sat, 30 Sep 2017 10:09:37 -0300</lastBuildDate>
+    <pubDate>Sat, 30 Sep 2017 11:18:57 -0300</pubDate>
+    <lastBuildDate>Sat, 30 Sep 2017 11:18:57 -0300</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>Java9 new features - collection factory methods</title>
+        <description>&lt;p&gt;Hi my friends, The java 9 is done ! :)&lt;/p&gt;
+
+&lt;p&gt;And now we have some new features how, collection factory methods&lt;/p&gt;
+
+&lt;p&gt;try it on jshell !&lt;/p&gt;
+
+&lt;h3 id=&quot;static-factory-methods&quot;&gt;Static factory methods&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;jshell&amp;gt; &lt;/span&gt;List&amp;lt;String&amp;gt; list &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; List.of&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;willian&quot;&lt;/span&gt;,
+                                    &lt;span class=&quot;s2&quot;&gt;&quot;vieira&quot;&lt;/span&gt;,
+                                    &lt;span class=&quot;s2&quot;&gt;&quot;rosa&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;;
+list &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&amp;gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;willian, vieira, rosa]&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;jshell&amp;gt; &lt;/span&gt;List&amp;lt;String&amp;gt; list &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; List.of&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;willian&quot;&lt;/span&gt;,
+                                    &lt;span class=&quot;s2&quot;&gt;&quot;vieira&quot;&lt;/span&gt;,
+                                    &lt;span class=&quot;s2&quot;&gt;&quot;rosa&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;;
+list &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&amp;gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;willian, vieira, rosa]&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;jshell&amp;gt; &lt;/span&gt;Map&amp;lt;String,Integer&amp;gt; map &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Map.of&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;one&quot;&lt;/span&gt;,1,
+                                        &lt;span class=&quot;s2&quot;&gt;&quot;two&quot;&lt;/span&gt;,2,
+                                        &lt;span class=&quot;s2&quot;&gt;&quot;three&quot;&lt;/span&gt;,3&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+map &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&amp;gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;one&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1, &lt;span class=&quot;nv&quot;&gt;two&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2, &lt;span class=&quot;nv&quot;&gt;three&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;3&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;-but-it-are-immultable-collections&quot;&gt;:( But it are immultable collections&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;jshell&amp;gt; &lt;/span&gt;List&amp;lt;String&amp;gt; immutable &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; List.of&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;but&quot;&lt;/span&gt;,
+                                        &lt;span class=&quot;s2&quot;&gt;&quot;is&quot;&lt;/span&gt;,
+                                        &lt;span class=&quot;s2&quot;&gt;&quot;a&quot;&lt;/span&gt;,
+                                        &lt;span class=&quot;s2&quot;&gt;&quot;immutable&quot;&lt;/span&gt;
+                                        &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.add&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;list&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;;
+|  Error:
+|  incompatible types: boolean cannot be converted to java.util.List&amp;lt;java.lang.String&amp;gt;
+|  List&amp;lt;String&amp;gt; immutable &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; List.of&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;but&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;is&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;a&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;immutable&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.add&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;list&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;;
+|                           ^------------------------------------------------^&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;jshell&amp;gt; &lt;/span&gt;List&amp;lt;String&amp;gt; immutable &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; List.of&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;but&quot;&lt;/span&gt;,
+                                        &lt;span class=&quot;s2&quot;&gt;&quot;is&quot;&lt;/span&gt;, 
+                                        &lt;span class=&quot;s2&quot;&gt;&quot;a&quot;&lt;/span&gt;, 
+                                        &lt;span class=&quot;s2&quot;&gt;&quot;immutable&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;;
+immutable &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&amp;gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;but, is, a, immutable]&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It’s just for today, bye !!!&lt;/p&gt;
+</description>
+        <pubDate>Sat, 30 Sep 2017 07:00:00 -0300</pubDate>
+        <link>http://localhost:4000//java/programming/reactive/2017/09/30/java9-new-features-collection-factory-methods.html</link>
+        <guid isPermaLink="true">http://localhost:4000//java/programming/reactive/2017/09/30/java9-new-features-collection-factory-methods.html</guid>
+        
+        
+        <category>Java</category>
+        
+        <category>Programming</category>
+        
+        <category>Reactive</category>
+        
+      </item>
     
       <item>
         <title>The Reactive Programming, basic concepts</title>
@@ -44,17 +102,15 @@
 &lt;p&gt;It’s just for today, bye !!!&lt;/p&gt;
 </description>
         <pubDate>Sat, 30 Sep 2017 07:00:00 -0300</pubDate>
-        <link>http://localhost:4000//java,/programming,/reactive/programming/2017/09/30/learning-about-reactive-programming.html</link>
-        <guid isPermaLink="true">http://localhost:4000//java,/programming,/reactive/programming/2017/09/30/learning-about-reactive-programming.html</guid>
+        <link>http://localhost:4000//java/programming/reactive/2017/09/30/learning-about-reactive-programming.html</link>
+        <guid isPermaLink="true">http://localhost:4000//java/programming/reactive/2017/09/30/learning-about-reactive-programming.html</guid>
         
         
-        <category>Java,</category>
-        
-        <category>Programming,</category>
-        
-        <category>Reactive</category>
+        <category>Java</category>
         
         <category>Programming</category>
+        
+        <category>Reactive</category>
         
       </item>
     

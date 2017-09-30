@@ -2,7 +2,7 @@
 layout: post
 title:  "The Reactive Programming, basic concepts"
 date:   2017-09-30 10:00:00
-categories: Java, Programming, Reactive Programming
+categories: Java Programming Reactive
 ---
 
 Hi my friends, following the moment subject I going to write a little about reactive programming

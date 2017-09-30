@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="/assets/css/style.css?v=057a39795210456c5033948dcbf07982d0d0af1f">
 
 <!-- Begin Jekyll SEO tag v2.3.0 -->
-<title>How do install java9 and JShell ! | willianvieira.github.io</title>
-<meta property="og:title" content="How do install java9 and JShell !" />
+<title>The Reactive Programming, basic concepts | willianvieira.github.io</title>
+<meta property="og:title" content="The Reactive Programming, basic concepts" />
 <meta name="author" content="Willian Vieira Rosa" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Hi my friends, my first post is about java 9, java is my prefered language, then I show for us How to install JDK9 and JShell using update-alternatives" />
-<meta property="og:description" content="Hi my friends, my first post is about java 9, java is my prefered language, then I show for us How to install JDK9 and JShell using update-alternatives" />
-<link rel="canonical" href="http://localhost:4000/java,/programming/2017/09/24/installing-java9.html" />
-<meta property="og:url" content="http://localhost:4000/java,/programming/2017/09/24/installing-java9.html" />
+<meta name="description" content="Hi my friends, following the moment subject I going to write a little about reactive programming" />
+<meta property="og:description" content="Hi my friends, following the moment subject I going to write a little about reactive programming" />
+<link rel="canonical" href="http://localhost:4000/java/programming/reactive/2017/09/30/learning-about-reactive-programming.html" />
+<meta property="og:url" content="http://localhost:4000/java/programming/reactive/2017/09/30/learning-about-reactive-programming.html" />
 <meta property="og:site_name" content="willianvieira.github.io" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-09-24T09:00:00-03:00" />
+<meta property="article:published_time" content="2017-09-30T07:00:00-03:00" />
 <script type="application/ld+json">
-{"name":null,"description":"Hi my friends, my first post is about java 9, java is my prefered language, then I show for us How to install JDK9 and JShell using update-alternatives","url":"http://localhost:4000/java,/programming/2017/09/24/installing-java9.html","headline":"How do install java9 and JShell !","dateModified":"2017-09-24T09:00:00-03:00","datePublished":"2017-09-24T09:00:00-03:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"Willian Vieira Rosa"},"image":null,"publisher":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/java,/programming/2017/09/24/installing-java9.html"},"@context":"http://schema.org"}</script>
+{"name":null,"description":"Hi my friends, following the moment subject I going to write a little about reactive programming","url":"http://localhost:4000/java/programming/reactive/2017/09/30/learning-about-reactive-programming.html","headline":"The Reactive Programming, basic concepts","dateModified":"2017-09-30T07:00:00-03:00","datePublished":"2017-09-30T07:00:00-03:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"Willian Vieira Rosa"},"image":null,"publisher":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/java/programming/reactive/2017/09/30/learning-about-reactive-programming.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -53,11 +53,11 @@
     <article class="post">
 
         <header class="post-header">
-            <h1 class="post-title">How do install java9 and JShell !</h1>
+            <h1 class="post-title">The Reactive Programming, basic concepts</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="2017-09-24">24 Sep 2017</time>
+                <time class="post-date" datetime="2017-09-30">30 Sep 2017</time>
                 
-                    on Java, and Programming
+                    on Java, Programming, and Reactive
                 
             </section>
         </header>
@@ -71,39 +71,44 @@
         </header> -->
 
         <!-- <span class="post-meta">
-            <time datetime="2017-09-24">24 Sep 2017</time>
+            <time datetime="2017-09-30">30 Sep 2017</time>
             
-                on Java, and Programming
+                on Java, Programming, and Reactive
             
         </span> -->
 
-        <!-- <h1 class="post-title">How do install java9 and JShell !</h1> -->
+        <!-- <h1 class="post-title">The Reactive Programming, basic concepts</h1> -->
 
         <section class="post-content">
-            <p>Hi my friends, my first post is about java 9, java is my prefered language, then I show for us How to install JDK9 and JShell using update-alternatives</p>
+            <p>Hi my friends, following the moment subject I going to write a little about reactive programming</p>
 
-<h1 id="1-download-java9-jdk">1 Download java9 jdk</h1>
+<p>In computing, reactive programming is an asynchronous programming paradigm concerned with data streams and the propagation of change. (wikipedia)</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /path/to/file
-wget http://download.java.net/java/GA/jdk9/9/binaries/jdk-9+181_linux-x64_bin.tar.gz</code></pre></figure>
+<p>first point, the reactive programming is a paradigm like OO, imperative and functional are also</p>
 
-<h1 id="2-uncompress-files">2 uncompress files</h1>
+<p>studying about paradigm the simple way to understand this approach is:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /path/to/file
-tar -xvf jdk-9+181_linux-x64_bin.tar.gz</code></pre></figure>
+<p>When I have a formula on cell C1 in spreadsheet ex.: ´=A1+B1´, and then when I change cell value, C1 cell show the sum of values</p>
 
-<h1 id="3-change-version-using-update-alternatives">3 change version using update-alternatives</h1>
+<p>In imperative programming we push and in reactive we take the data, it is the main difference amoung them</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo update-alternatives --install /usr/bin/java java /path/to/file/jdk-9/bin/java 0
-sudo update-alternatives --install /usr/bin/javac javac /path/to/file/jdk-9/bin/javac 0
-sudo update-alternatives --install /usr/bin/jshell jshell /path/to/file/jdk-9/bin/jshell 0</code></pre></figure>
+<h2 id="benefits">Benefits</h2>
 
-<h1 id="4-and-finally-test-it-">4 and finally test it !</h1>
+<h4 id="flexibility">Flexibility</h4>
+<h4 id="scalable">Scalable</h4>
+<h4 id="more-tolerance-of-failure">More tolerance of failure</h4>
+<h4 id="flexibility-1">Flexibility</h4>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">java -version
-openjdk version <span class="s2">"9"</span>
-OpenJDK Runtime Environment <span class="o">(</span>build 9+181<span class="o">)</span>
-OpenJDK 64-Bit Server VM <span class="o">(</span>build 9+181, mixed mode<span class="o">)</span></code></pre></figure>
+<h2 id="the-four-principles-according-the-reactive-manifesto">The Four Principles according the reactive manifesto</h2>
+
+<h4 id="responsive">Responsive</h4>
+<h4 id="elastic-resilient">Elastic, Resilient</h4>
+<h4 id="message-driven">Message Driven</h4>
+
+<p>its is a brief summary about the reactive programming concept</p>
+
+<p>see more:
+<a href="https://www.reactivemanifesto.org/">The Reactive Manifesto</a></p>
 
 <p>It’s just for today, bye !!!</p>
 
@@ -131,15 +136,15 @@ OpenJDK 64-Bit Server VM <span class="o">(</span>build 9+181, mixed mode<span cl
             <!-- Share links section -->
             <section class="share">
     <h4>Share this post</h4>
-    <a class="icon-twitter" href="http://twitter.com/share?text=How do install java9 and JShell !&amp;url=https://willianvieira.github.io/java,/programming/2017/09/24/installing-java9.html"
+    <a class="icon-twitter" href="http://twitter.com/share?text=The Reactive Programming, basic concepts&amp;url=https://willianvieira.github.io/java/programming/reactive/2017/09/30/learning-about-reactive-programming.html"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="hidden">Twitter</span>
     </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://willianvieira.github.io/java,/programming/2017/09/24/installing-java9.html"
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://willianvieira.github.io/java/programming/reactive/2017/09/30/learning-about-reactive-programming.html"
         onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
         <span class="hidden">Facebook</span>
     </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=https://willianvieira.github.io/java,/programming/2017/09/24/installing-java9.html"
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=https://willianvieira.github.io/java/programming/reactive/2017/09/30/learning-about-reactive-programming.html"
        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
         <span class="hidden">Google+</span>
     </a>

@@ -5,9 +5,58 @@
     <description>Blogging about programming languages or anything :)</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 29 Sep 2017 20:38:49 -0300</pubDate>
-    <lastBuildDate>Fri, 29 Sep 2017 20:38:49 -0300</lastBuildDate>
+    <pubDate>Sat, 30 Sep 2017 10:09:37 -0300</pubDate>
+    <lastBuildDate>Sat, 30 Sep 2017 10:09:37 -0300</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>The Reactive Programming, basic concepts</title>
+        <description>&lt;p&gt;Hi my friends, following the moment subject I going to write a little about reactive programming&lt;/p&gt;
+
+&lt;p&gt;In computing, reactive programming is an asynchronous programming paradigm concerned with data streams and the propagation of change. (wikipedia)&lt;/p&gt;
+
+&lt;p&gt;first point, the reactive programming is a paradigm like OO, imperative and functional are also&lt;/p&gt;
+
+&lt;p&gt;studying about paradigm the simple way to understand this approach is:&lt;/p&gt;
+
+&lt;p&gt;When I have a formula on cell C1 in spreadsheet ex.: ´=A1+B1´, and then when I change cell value, C1 cell show the sum of values&lt;/p&gt;
+
+&lt;p&gt;In imperative programming we push and in reactive we take the data, it is the main difference amoung them&lt;/p&gt;
+
+&lt;h2 id=&quot;benefits&quot;&gt;Benefits&lt;/h2&gt;
+
+&lt;h4 id=&quot;flexibility&quot;&gt;Flexibility&lt;/h4&gt;
+&lt;h4 id=&quot;scalable&quot;&gt;Scalable&lt;/h4&gt;
+&lt;h4 id=&quot;more-tolerance-of-failure&quot;&gt;More tolerance of failure&lt;/h4&gt;
+&lt;h4 id=&quot;flexibility-1&quot;&gt;Flexibility&lt;/h4&gt;
+
+&lt;h2 id=&quot;the-four-principles-according-the-reactive-manifesto&quot;&gt;The Four Principles according the reactive manifesto&lt;/h2&gt;
+
+&lt;h4 id=&quot;responsive&quot;&gt;Responsive&lt;/h4&gt;
+&lt;h4 id=&quot;elastic-resilient&quot;&gt;Elastic, Resilient&lt;/h4&gt;
+&lt;h4 id=&quot;message-driven&quot;&gt;Message Driven&lt;/h4&gt;
+
+&lt;p&gt;its is a brief summary about the reactive programming concept&lt;/p&gt;
+
+&lt;p&gt;see more:
+&lt;a href=&quot;https://www.reactivemanifesto.org/&quot;&gt;The Reactive Manifesto&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s just for today, bye !!!&lt;/p&gt;
+</description>
+        <pubDate>Sat, 30 Sep 2017 07:00:00 -0300</pubDate>
+        <link>http://localhost:4000//java,/programming,/reactive/programming/2017/09/30/learning-about-reactive-programming.html</link>
+        <guid isPermaLink="true">http://localhost:4000//java,/programming,/reactive/programming/2017/09/30/learning-about-reactive-programming.html</guid>
+        
+        
+        <category>Java,</category>
+        
+        <category>Programming,</category>
+        
+        <category>Reactive</category>
+        
+        <category>Programming</category>
+        
+      </item>
     
       <item>
         <title>How do install java9 and JShell !</title>
@@ -23,13 +72,13 @@ wget http://download.java.net/java/GA/jdk9/9/binaries/jdk-9+181_linux-x64_bin.ta
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /path/to/file
 tar -xvf jdk-9+181_linux-x64_bin.tar.gz&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h1 id=&quot;3-installing-this-using-update-alternatives&quot;&gt;3 installing this using update-alternatives&lt;/h1&gt;
+&lt;h1 id=&quot;3-change-version-using-update-alternatives&quot;&gt;3 change version using update-alternatives&lt;/h1&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo update-alternatives --install /usr/bin/java java /path/to/file/jdk-9/bin/java 0
 sudo update-alternatives --install /usr/bin/javac javac /path/to/file/jdk-9/bin/javac 0
 sudo update-alternatives --install /usr/bin/jshell jshell /path/to/file/jdk-9/bin/jshell 0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h1 id=&quot;4-trying-your-installation&quot;&gt;4 trying your installation&lt;/h1&gt;
+&lt;h1 id=&quot;4-and-finally-test-it-&quot;&gt;4 and finally test it !&lt;/h1&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;java -version
 openjdk version &lt;span class=&quot;s2&quot;&gt;&quot;9&quot;&lt;/span&gt;

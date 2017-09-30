@@ -19,14 +19,14 @@ cd /path/to/file
 tar -xvf jdk-9+181_linux-x64_bin.tar.gz
 {% endhighlight %}
 
-# 3 installing this using update-alternatives
+# 3 change version using update-alternatives
 {% highlight bash %}
 sudo update-alternatives --install /usr/bin/java java /path/to/file/jdk-9/bin/java 0
 sudo update-alternatives --install /usr/bin/javac javac /path/to/file/jdk-9/bin/javac 0
 sudo update-alternatives --install /usr/bin/jshell jshell /path/to/file/jdk-9/bin/jshell 0
 {% endhighlight %}
 
-# 4 trying your installation
+# 4 and finally test it !
 {% highlight bash %}
 java -version
 openjdk version "9"

@@ -15,12 +15,12 @@
   <!-- partial:index.partial.html -->
   <div id="app">
     <v-app id="inspire">
-      <v-layout row>
-        <v-flex xs md6 lg3>
-          <v-card flat color="transparent">
+      <v-container>
+        <v-col md="12">
+          <v-card color="transparent">
             <v-header>Arraste para somar dias a data atual</v-header>
             <v-card-text>
-              <v-row>
+              <v-row md="12">
                 <v-slider v-model="slider" class="align-center" :max="max" :min="min" hide-details v-on:end="dragEnd">
                   <template v-slot:append>
                     <v-text-field v-model="slider" class="mt-0 pt-0" hide-details single-line type="number"
@@ -28,13 +28,13 @@
                   </template>
                 </v-slider>
               </v-row>
-              <v-row justify="center">
-                <v-date-picker v-model="picker" :open-date="openDate" ref="pick" xs4></v-date-picker>
+              <v-row justify="center" md="12">
+                <v-date-picker v-model="picker" :open-date="openDate" ref="pick"></v-date-picker>
               </v-row>
             </v-card-text>
           </v-card>
-        </v-flex>
-      </v-layout>
+        </v-col>
+      </v-container>
     </v-app>
 
   </div>

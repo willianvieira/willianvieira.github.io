@@ -16,7 +16,7 @@
   <div id="app">
     <v-app id="inspire">
       <v-layout row>
-        <v-flex xs12 sm6 offset-sm3>
+        <v-flex xs md6 lg3>
           <v-card flat color="transparent">
             <v-header>Arraste para somar dias a data atual</v-header>
             <v-card-text>
@@ -31,7 +31,6 @@
               <v-row justify="center">
                 <v-date-picker v-model="picker" :open-date="openDate" ref="pick" xs4></v-date-picker>
               </v-row>
-
             </v-card-text>
           </v-card>
         </v-flex>

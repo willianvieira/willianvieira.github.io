@@ -17,19 +17,31 @@
       </v-navigation-drawer>
 
       <v-app-bar app>
-        <!-- -->
+        <v-app-bar-nav-icon></v-app-bar-nav-icon>
+
+        <v-toolbar-title>Meus Vencimentos</v-toolbar-title>
       </v-app-bar>
       <v-main>
         <v-container fluid>
+          <v-card flat color="transparent">
+            <v-row justify="center">
+              <v-subheader>Arraste para somar os dias.</v-subheader>
+            </v-row>
             <v-slider v-model="slider" class="align-center" :max="max" :min="min" hide-details v-on:end="dragEnd">
               <template v-slot:append>
                 <v-text-field v-model="slider" class="mt-0 pt-0" hide-details single-line type="number"
                   style="width: 60px"></v-text-field>
               </template>
             </v-slider>
-            <v-date-picker v-model="picker" :open-date="openDate" ref="pick"></v-date-picker>
+            <v-row justify="center">
+              <v-date-picker v-model="picker" :open-date="openDate" ref="pick"></v-date-picker>
+            </v-row>
+          </v-card>
         </v-container>
       </v-main>
+      <v-footer app>
+        <!-- -->
+      </v-footer>
     </v-app>
 
   </div>

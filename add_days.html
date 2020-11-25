@@ -17,11 +17,11 @@
       flat
       color="transparent"
     >
-      <v-subheader>Min and max default slider</v-subheader>
+      <v-subheader>Arraste para somar dias a data atual</v-subheader>
   
       <v-card-text>
         <v-row>
-          <v-col class="pr-4">
+          <v-col class="xs">
             <v-slider
               v-model="slider"
               class="align-center"
@@ -43,11 +43,12 @@
             </v-slider>
           </v-col>
         </v-row>
-      </v-card-text>
-    </v-card>
-  <v-row justify="center">
+  <v-row justify="center" class="xs">
     <v-date-picker v-model="picker" :open-date="openDate" ref="pick"></v-date-picker>
   </v-row>    
+        
+      </v-card-text>
+    </v-card>
   </v-app>
 </div>
 <!-- partial -->

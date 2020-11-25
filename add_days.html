@@ -21,7 +21,6 @@
       </v-app-bar>
       <v-main>
         <v-container fluid>
-          <v-col>
             <v-slider v-model="slider" class="align-center" :max="max" :min="min" hide-details v-on:end="dragEnd">
               <template v-slot:append>
                 <v-text-field v-model="slider" class="mt-0 pt-0" hide-details single-line type="number"

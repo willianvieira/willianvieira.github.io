@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Vuetify Example Pen</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Material+Icons'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/vuetify@2.3.19/dist/vuetify.min.css'>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <v-app id="inspire">
+    <v-card
+      flat
+      color="transparent"
+    >
+      <v-subheader>Min and max default slider</v-subheader>
+  
+      <v-card-text>
+        <v-row>
+          <v-col class="pr-4">
+            <v-slider
+              v-model="slider"
+              class="align-center"
+              :max="max"
+              :min="min"
+              hide-details
+              v-on:end="dragEnd"
+            >
+              <template v-slot:append>
+                <v-text-field
+                  v-model="slider"
+                  class="mt-0 pt-0"
+                  hide-details
+                  single-line
+                  type="number"
+                  style="width: 60px"
+                ></v-text-field>
+              </template>
+            </v-slider>
+          </v-col>
+        </v-row>
+      </v-card-text>
+    </v-card>
+  <v-row justify="center">
+    <v-date-picker v-model="picker" :open-date="openDate" ref="pick"></v-date-picker>
+  </v-row>    
+  </v-app>
+</div>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/babel-polyfill/dist/polyfill.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/vuetify@2.3.19/dist/vuetify.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

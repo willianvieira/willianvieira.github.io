@@ -5,7 +5,9 @@ new Vue({
     return {
       min: 0,
       max: 365,
-      slider: 0 };
+      slider: 0 ,
+      collapseOnScroll: true,
+    };
 
   },
   methods: {

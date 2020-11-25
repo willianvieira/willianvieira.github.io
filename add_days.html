@@ -2,46 +2,41 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>add days</title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900'>
-  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css'>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Material+Icons'>
-  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/vuetify@2.3.19/dist/vuetify.min.css'>
-
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 
 <body>
   <!-- partial:index.partial.html -->
   <div id="app">
     <v-app id="inspire">
-      <v-container>
-        <v-col md="12">
-          <v-card color="transparent">
-            <v-header>Arraste para somar dias a data atual</v-header>
-            <v-card-text>
-              <v-row md="12">
-                <v-slider v-model="slider" class="align-center" :max="max" :min="min" hide-details v-on:end="dragEnd">
-                  <template v-slot:append>
-                    <v-text-field v-model="slider" class="mt-0 pt-0" hide-details single-line type="number"
-                      style="width: 60px"></v-text-field>
-                  </template>
-                </v-slider>
-              </v-row>
-              <v-row justify="center" md="12">
-                <v-date-picker v-model="picker" :open-date="openDate" ref="pick"></v-date-picker>
-              </v-row>
-            </v-card-text>
-          </v-card>
-        </v-col>
-      </v-container>
+      <v-navigation-drawer app>
+        <!-- -->
+      </v-navigation-drawer>
+
+      <v-app-bar app>
+        <!-- -->
+      </v-app-bar>
+      <v-main>
+        <v-container fluid>
+          <v-col>
+            <v-slider v-model="slider" class="align-center" :max="max" :min="min" hide-details v-on:end="dragEnd">
+              <template v-slot:append>
+                <v-text-field v-model="slider" class="mt-0 pt-0" hide-details single-line type="number"
+                  style="width: 60px"></v-text-field>
+              </template>
+            </v-slider>
+            <v-date-picker v-model="picker" :open-date="openDate" ref="pick"></v-date-picker>
+        </v-container>
+      </v-main>
     </v-app>
 
   </div>
   <!-- partial -->
-  <script src='https://cdn.jsdelivr.net/npm/babel-polyfill/dist/polyfill.min.js'></script>
-  <script src='https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js'></script>
-  <script src='https://cdn.jsdelivr.net/npm/vuetify@2.3.19/dist/vuetify.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
   <script src="./script.js"></script>
 
 </body>

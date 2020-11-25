@@ -3,9 +3,9 @@ new Vue({
   vuetify: new Vuetify(),
   data() {
     return {
-      min: 1,
+      min: 0,
       max: 365,
-      slider: 30 };
+      slider: 0 };
 
   },
   methods: {
